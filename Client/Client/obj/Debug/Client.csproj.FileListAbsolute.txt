@@ -1,1 +1,13 @@
 c:\users\mehak fatima\documents\visual studio 2012\Projects\Client\Client\bin\Debug\Client.exe.config
+C:\Users\Anum\Desktop\finalsprint\Client\Client\bin\Debug\Client.exe.config
+C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.Login.resources
+C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.LoginD.resources
+C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.Registration.resources
+C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.ResetPassword.resources
+C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\Anum\Desktop\finalsprint\Client\Client\bin\Debug\Client.exe
+C:\Users\Anum\Desktop\finalsprint\Client\Client\bin\Debug\Client.pdb
+C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.exe
+C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.pdb

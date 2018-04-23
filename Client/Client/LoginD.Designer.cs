@@ -77,6 +77,7 @@
             this.linklblRegistration.TabIndex = 3;
             this.linklblRegistration.TabStop = true;
             this.linklblRegistration.Text = "Registration";
+            this.linklblRegistration.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblRegistration_LinkClicked);
             // 
             // txtCNIC
             // 

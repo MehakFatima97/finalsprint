@@ -113,6 +113,7 @@
             this.linklblLogin.TabIndex = 2;
             this.linklblLogin.TabStop = true;
             this.linklblLogin.Text = "Login";
+            this.linklblLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblLogin_LinkClicked);
             // 
             // cmdConfirmPassword
             // 

@@ -62,6 +62,7 @@
             this.linklblResetPassword.TabIndex = 2;
             this.linklblResetPassword.TabStop = true;
             this.linklblResetPassword.Text = "Reset Password";
+            this.linklblResetPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblResetPassword_LinkClicked);
             // 
             // cmdLogin
             // 
@@ -98,6 +99,7 @@
             this.linklblRegistration.TabIndex = 2;
             this.linklblRegistration.TabStop = true;
             this.linklblRegistration.Text = "Registration";
+            this.linklblRegistration.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblRegistration_LinkClicked);
             // 
             // Login
             // 

@@ -130,6 +130,7 @@
             this.linklblLogin.TabIndex = 3;
             this.linklblLogin.TabStop = true;
             this.linklblLogin.Text = "Login";
+            this.linklblLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblLogin_LinkClicked);
             // 
             // radioButtonPatient
             // 
@@ -173,6 +174,7 @@
             this.radioButtonLAdmin.TabStop = true;
             this.radioButtonLAdmin.Text = "LAdmin";
             this.radioButtonLAdmin.UseVisualStyleBackColor = true;
+            this.radioButtonLAdmin.CheckedChanged += new System.EventHandler(this.radioButtonLAdmin_CheckedChanged);
             // 
             // radioButtonLDoctor
             // 
@@ -184,6 +186,7 @@
             this.radioButtonLDoctor.TabStop = true;
             this.radioButtonLDoctor.Text = "LDoctor";
             this.radioButtonLDoctor.UseVisualStyleBackColor = true;
+            this.radioButtonLDoctor.CheckedChanged += new System.EventHandler(this.radioButtonLDoctor_CheckedChanged);
             // 
             // radioButtonLPatient
             // 
@@ -195,6 +198,7 @@
             this.radioButtonLPatient.TabStop = true;
             this.radioButtonLPatient.Text = "LPatient";
             this.radioButtonLPatient.UseVisualStyleBackColor = true;
+            this.radioButtonLPatient.CheckedChanged += new System.EventHandler(this.radioButtonLPatient_CheckedChanged);
             // 
             // Registration
             // 

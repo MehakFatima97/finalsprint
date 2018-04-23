@@ -20,50 +20,31 @@ namespace Client
         private void cmdRegister_Click(object sender, EventArgs e)
         {
             localhost.Service1 myserver = new localhost.Service1();
-            bool register;
-            bool registerpassed;
+            //bool register;
+            //bool registerpassed;
             if (radioButtonAdmin.Checked == true)
             {
-                localhost.registera(txtName.Text, txtCNIC.Text, txtPassword.Text, out register, out registerpassed);
+                //myserver.registera(txtName.Text , txtCNIC.Text , txtPassword.Text);
+                myserver.registera(txtName.Text, txtCNIC.Text, txtPassword.Text);
                 {
-                    if (register)
-                    {
-                        MessageBox.Show("You r registered");
-                    }
-                    else
-                    {
-                        MessageBox.Show("u r not registered");
-                    }
+                    MessageBox.Show("u r registered");
                 }
             }
 
             else if (radioButtonPatient.Checked == true)
             {
-                localhost.registerp(txtName.Text, txtCNIC.Text, txtPassword.Text, out register, out registerpassed);
+                myserver.registerp(txtName.Text, txtCNIC.Text, txtPassword.Text);
                 {
-                    if (register)
-                    {
-                        MessageBox.Show("You r registered");
-                    }
-                    else
-                    {
-                        MessageBox.Show("u r not registered");
-                    }
+                    MessageBox.Show("u r registered");
+                   
                 }
             }
 
             else if (radioButtonDoctor.Checked == true)
             {
-                localhost.registerd(txtName.Text, txtCNIC.Text, txtPassword.Text, txtHospitalName.Text, out register, out registerpassed);
+                myserver.registerd(txtName.Text, txtCNIC.Text, txtPassword.Text, txtHospitalName.Text);
                 {
-                    if (register)
-                    {
-                        MessageBox.Show("You r registered");
-                    }
-                    else
-                    {
-                        MessageBox.Show("u r not registered");
-                    }
+                    MessageBox.Show("u r registered");
                 }
             }
             else
@@ -74,6 +55,32 @@ namespace Client
 
 
 
+        }
+
+        private void radioButtonLAdmin_CheckedChanged(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.Show();
+        }
+
+        private void linklblLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+        }
+
+        private void radioButtonLPatient_CheckedChanged(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.Show();
+        }
+
+        private void radioButtonLDoctor_CheckedChanged(object sender, EventArgs e)
+        {
+            LoginD login = new LoginD();
+            this.Hide();
+            login.Show();
         }
     }
 }

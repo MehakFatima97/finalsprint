@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:36395/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService3" />
+  <xs:element name="GetData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="value" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataUsingDataContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="composite" nillable="true" type="q1:CompositeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataUsingDataContractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q2:CompositeType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reset">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="patientCNIC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="patientpassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="confirmpassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="resetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="resetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reseta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="adminname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="adminCNIC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="adminpassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="confirmpassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="resetaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="resetaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="resetd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doctorname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="doctorCNIC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="doctorpassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="confirmpassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="resetdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="resetdResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registera">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="adminname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="adminCNIC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="adminpassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registeraResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registerp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="patientCNIC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="patientpassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registerpResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registerd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doctorname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="doctorCNIC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="doctorpassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hospitalname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registerdResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="logina">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="adminCNIC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="adminpassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loginaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loginaResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loginp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patientCNIC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="patientpassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loginpResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loginpResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="logind">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doctorname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="doctorCNIC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="doctorpassword" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hospitalname" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="logindResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="logindResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

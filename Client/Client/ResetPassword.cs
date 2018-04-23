@@ -22,9 +22,13 @@ namespace Client
             localhost.Service1 myserver = new localhost.Service1();
             bool reset;
             bool resetpassed;
-            localhost.reset(txtName.Text,txtCNIC.Text, txtPassword.Text,txtConfirmPassword.Text, out reset, out resetpassed);
-            localhost.reseta(txtCNIC.Text, txtPassword.Text, txtConfirmPassword.Text, out reset, out resetpassed);
-            localhost.resetd(txtCNIC.Text, txtPassword.Text, txtConfirmPassword.Text, out reset, out resetpassed);
+            //bool reseta;
+            //bool resetapassed;
+            //bool resetd;
+            //bool resetdpassed;
+            myserver.reset(txtName.Text,txtCNIC.Text, txtPassword.Text,txtConfirmPassword.Text, out reset, out resetpassed);
+            myserver.reseta(txtName.Text,txtCNIC.Text, txtPassword.Text, txtConfirmPassword.Text, out reset, out resetpassed);
+            myserver.resetd(txtName.Text ,txtCNIC.Text, txtPassword.Text, txtConfirmPassword.Text, out reset, out resetpassed);
             if (reset)
             {
                 MessageBox.Show("password has been reset");
@@ -35,6 +39,11 @@ namespace Client
             }
 
 
+        }
+
+        private void linklblLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
         }
     }
 }

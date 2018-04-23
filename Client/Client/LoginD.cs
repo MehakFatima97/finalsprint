@@ -24,7 +24,9 @@ namespace Client
 
         private void linklblResetPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            ResetPassword resetpassword = new ResetPassword();
+            this.Hide();
+            resetpassword.Show();
         }
 
         private void cmdLogin_Click(object sender, EventArgs e)
@@ -32,7 +34,7 @@ namespace Client
             localhost.Service1 myserver = new localhost.Service1();
             bool login;
             bool loginpassed;
-            localhost.logind(txtName.Text, txtCNIC.Text,txtPassword.Text , txtHospitalName.Text, out login, out loginpassed);
+            myserver.logind(txtName.Text, txtCNIC.Text,txtPassword.Text , txtHospitalName.Text, out login, out loginpassed);
             
             if (login)
             {
@@ -43,6 +45,13 @@ namespace Client
                 MessageBox.Show("invalid user");
             }
 
+        }
+
+        private void linklblRegistration_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Registration registration = new Registration();
+            this.Hide();
+            registration.Show();
         }
     }
 }

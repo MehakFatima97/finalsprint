@@ -4,3 +4,9 @@ c:\users\anum\documents\visual studio 2013\Projects\WcfService3\WcfService3\bin\
 c:\users\anum\documents\visual studio 2013\Projects\WcfService3\WcfService3\obj\Debug\WcfService3.csprojResolveAssemblyReference.cache
 c:\users\anum\documents\visual studio 2013\Projects\WcfService3\WcfService3\obj\Debug\WcfService3.dll
 c:\users\anum\documents\visual studio 2013\Projects\WcfService3\WcfService3\obj\Debug\WcfService3.pdb
+C:\Users\Anum\Desktop\finalsprint\WcfService3\WcfService3\bin\WcfService3.dll.config
+C:\Users\Anum\Desktop\finalsprint\WcfService3\WcfService3\bin\WcfService3.dll
+C:\Users\Anum\Desktop\finalsprint\WcfService3\WcfService3\bin\WcfService3.pdb
+C:\Users\Anum\Desktop\finalsprint\WcfService3\WcfService3\obj\Debug\WcfService3.csprojResolveAssemblyReference.cache
+C:\Users\Anum\Desktop\finalsprint\WcfService3\WcfService3\obj\Debug\WcfService3.dll
+C:\Users\Anum\Desktop\finalsprint\WcfService3\WcfService3\obj\Debug\WcfService3.pdb
