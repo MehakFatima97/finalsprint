@@ -10,3 +10,8 @@ C:\Users\Anum\Desktop\finalsprint\WcfService3\WcfService3\bin\WcfService3.pdb
 C:\Users\Anum\Desktop\finalsprint\WcfService3\WcfService3\obj\Debug\WcfService3.csprojResolveAssemblyReference.cache
 C:\Users\Anum\Desktop\finalsprint\WcfService3\WcfService3\obj\Debug\WcfService3.dll
 C:\Users\Anum\Desktop\finalsprint\WcfService3\WcfService3\obj\Debug\WcfService3.pdb
+C:\Users\mehak fatima\Desktop\New folder\finalsprint\WcfService3\WcfService3\bin\WcfService3.dll
+C:\Users\mehak fatima\Desktop\New folder\finalsprint\WcfService3\WcfService3\bin\WcfService3.pdb
+C:\Users\mehak fatima\Desktop\New folder\finalsprint\WcfService3\WcfService3\obj\Debug\WcfService3.csprojResolveAssemblyReference.cache
+C:\Users\mehak fatima\Desktop\New folder\finalsprint\WcfService3\WcfService3\obj\Debug\WcfService3.dll
+C:\Users\mehak fatima\Desktop\New folder\finalsprint\WcfService3\WcfService3\obj\Debug\WcfService3.pdb

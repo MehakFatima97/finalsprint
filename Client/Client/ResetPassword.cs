@@ -26,7 +26,7 @@ namespace Client
             //bool resetapassed;
             //bool resetd;
             //bool resetdpassed;
-            myserver.reset(txtName.Text,txtCNIC.Text, txtPassword.Text,txtConfirmPassword.Text, out reset, out resetpassed);
+            myserver.reset(txtName.Text,txtCNIC.Text, txtPassword.Text,txtConfirmPassword.Text,out reset,out resetpassed);
             myserver.reseta(txtName.Text,txtCNIC.Text, txtPassword.Text, txtConfirmPassword.Text, out reset, out resetpassed);
             myserver.resetd(txtName.Text ,txtCNIC.Text, txtPassword.Text, txtConfirmPassword.Text, out reset, out resetpassed);
             if (reset)
@@ -43,7 +43,31 @@ namespace Client
 
         private void linklblLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            localhost.Service1 myserver = new localhost.Service1();
+            bool login;
+            bool loginpassed;
+            myserver.logina(txtCNIC.Text, txtConfirmPassword.Text,out login,out loginpassed );
+            if (login)
+            {
+                Login l = new Login();
+                this.Hide();
+                l.Show();
+            }
+            myserver.loginp(txtCNIC.Text, txtConfirmPassword.Text, out login, out loginpassed);
+            if (login)
+            {
+                Login l = new Login();
+                this.Hide();
+                l.Show();
+            }
+                
+            else
+            {
+                LoginD k = new LoginD();
+                this.Hide();
+                k.Show();
+            }
             
-        }
+        }   
     }
 }

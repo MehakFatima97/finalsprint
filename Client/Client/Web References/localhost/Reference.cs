@@ -51,6 +51,8 @@ namespace Client.localhost {
         
         private System.Threading.SendOrPostCallback logindOperationCompleted;
         
+        private System.Threading.SendOrPostCallback searchOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -121,6 +123,9 @@ namespace Client.localhost {
         
         /// <remarks/>
         public event logindCompletedEventHandler logindCompleted;
+        
+        /// <remarks/>
+        public event searchCompletedEventHandler searchCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -491,6 +496,35 @@ namespace Client.localhost {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/search", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService3")]
+        public DoctorUser[] search() {
+            object[] results = this.Invoke("search", new object[0]);
+            return ((DoctorUser[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void searchAsync() {
+            this.searchAsync(null);
+        }
+        
+        /// <remarks/>
+        public void searchAsync(object userState) {
+            if ((this.searchOperationCompleted == null)) {
+                this.searchOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsearchOperationCompleted);
+            }
+            this.InvokeAsync("search", new object[0], this.searchOperationCompleted, userState);
+        }
+        
+        private void OnsearchOperationCompleted(object arg) {
+            if ((this.searchCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.searchCompleted(this, new searchCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -552,6 +586,54 @@ namespace Client.localhost {
             }
             set {
                 this.stringValueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService3")]
+    public partial class DoctorUser {
+        
+        private string doctorCNICField;
+        
+        private string doctornameField;
+        
+        private string hospitalnameField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string DoctorCNIC {
+            get {
+                return this.doctorCNICField;
+            }
+            set {
+                this.doctorCNICField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Doctorname {
+            get {
+                return this.doctornameField;
+            }
+            set {
+                this.doctornameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Hospitalname {
+            get {
+                return this.hospitalnameField;
+            }
+            set {
+                this.hospitalnameField = value;
             }
         }
     }
@@ -820,6 +902,32 @@ namespace Client.localhost {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void searchCompletedEventHandler(object sender, searchCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class searchCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal searchCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public DoctorUser[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DoctorUser[])(this.results[0]));
             }
         }
     }

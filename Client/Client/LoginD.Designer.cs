@@ -39,6 +39,7 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblHospitalName = new System.Windows.Forms.Label();
             this.linklblResetPassword = new System.Windows.Forms.LinkLabel();
+            this.linklblDoctorInfo = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lblName
@@ -141,11 +142,23 @@
             this.linklblResetPassword.Text = "Reset Password";
             this.linklblResetPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblResetPassword_LinkClicked);
             // 
+            // linklblDoctorInfo
+            // 
+            this.linklblDoctorInfo.AutoSize = true;
+            this.linklblDoctorInfo.Location = new System.Drawing.Point(602, 31);
+            this.linklblDoctorInfo.Name = "linklblDoctorInfo";
+            this.linklblDoctorInfo.Size = new System.Drawing.Size(60, 13);
+            this.linklblDoctorInfo.TabIndex = 4;
+            this.linklblDoctorInfo.TabStop = true;
+            this.linklblDoctorInfo.Text = "Doctor Info";
+            this.linklblDoctorInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblDoctorInfo_LinkClicked);
+            // 
             // LoginD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 307);
+            this.Controls.Add(this.linklblDoctorInfo);
             this.Controls.Add(this.linklblResetPassword);
             this.Controls.Add(this.linklblRegistration);
             this.Controls.Add(this.cmdLogin);
@@ -177,5 +190,6 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblHospitalName;
         private System.Windows.Forms.LinkLabel linklblResetPassword;
+        private System.Windows.Forms.LinkLabel linklblDoctorInfo;
     }
 }

@@ -73,6 +73,12 @@
   <wsdl:message name="IService1_logind_OutputMessage">
     <wsdl:part name="parameters" element="tns:logindResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_search_InputMessage">
+    <wsdl:part name="parameters" element="tns:search" />
+  </wsdl:message>
+  <wsdl:message name="IService1_search_OutputMessage">
+    <wsdl:part name="parameters" element="tns:searchResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -117,6 +123,10 @@
     <wsdl:operation name="logind">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/logind" message="tns:IService1_logind_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/logindResponse" message="tns:IService1_logind_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="search">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/search" message="tns:IService1_search_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/searchResponse" message="tns:IService1_search_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -213,6 +223,15 @@
     </wsdl:operation>
     <wsdl:operation name="logind">
       <soap:operation soapAction="http://tempuri.org/IService1/logind" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="search">
+      <soap:operation soapAction="http://tempuri.org/IService1/search" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -35,6 +35,7 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.linklblRegistration = new System.Windows.Forms.LinkLabel();
+            this.linklblDoctorinfo = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // txtCNIC
@@ -101,11 +102,22 @@
             this.linklblRegistration.Text = "Registration";
             this.linklblRegistration.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblRegistration_LinkClicked);
             // 
+            // linklblDoctorinfo
+            // 
+            this.linklblDoctorinfo.AutoSize = true;
+            this.linklblDoctorinfo.Location = new System.Drawing.Point(522, 26);
+            this.linklblDoctorinfo.Name = "linklblDoctorinfo";
+            this.linklblDoctorinfo.Size = new System.Drawing.Size(59, 13);
+            this.linklblDoctorinfo.TabIndex = 4;
+            this.linklblDoctorinfo.TabStop = true;
+            this.linklblDoctorinfo.Text = "Doctor info";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(657, 310);
+            this.Controls.Add(this.linklblDoctorinfo);
             this.Controls.Add(this.cmdLogin);
             this.Controls.Add(this.linklblRegistration);
             this.Controls.Add(this.linklblResetPassword);
@@ -129,5 +141,6 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.LinkLabel linklblRegistration;
+        private System.Windows.Forms.LinkLabel linklblDoctorinfo;
     }
 }

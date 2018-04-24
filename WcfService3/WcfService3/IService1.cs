@@ -36,6 +36,10 @@ namespace WcfService3
         bool loginp(string patientCNIC, string patientpassword);
         [OperationContract]
         bool logind(string doctorname,string doctorCNIC, string doctorpassword, string hospitalname);
+        [OperationContract]
+        List<DoctorUser> search();
+        //[OperationContract]
+        //DoctorUser search(string CNIC);
         
         // TODO: Add your service operations here
     }

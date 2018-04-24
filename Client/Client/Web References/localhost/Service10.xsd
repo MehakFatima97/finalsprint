@@ -7,4 +7,18 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
+  <xs:complexType name="ArrayOfDoctorUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DoctorUser" nillable="true" type="tns:DoctorUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDoctorUser" nillable="true" type="tns:ArrayOfDoctorUser" />
+  <xs:complexType name="DoctorUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DoctorCNIC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Doctorname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hospitalname" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DoctorUser" nillable="true" type="tns:DoctorUser" />
 </xs:schema>

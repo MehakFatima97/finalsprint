@@ -170,4 +170,16 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="search">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="searchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="searchResult" nillable="true" type="q3:ArrayOfDoctorUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

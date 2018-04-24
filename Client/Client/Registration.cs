@@ -24,28 +24,30 @@ namespace Client
             //bool registerpassed;
             if (radioButtonAdmin.Checked == true)
             {
+                //MessageBox.Show("u r registered");
                 //myserver.registera(txtName.Text , txtCNIC.Text , txtPassword.Text);
                 myserver.registera(txtName.Text, txtCNIC.Text, txtPassword.Text);
-                {
                     MessageBox.Show("u r registered");
-                }
+                
             }
 
             else if (radioButtonPatient.Checked == true)
             {
+               // MessageBox.Show("u r registered");
                 myserver.registerp(txtName.Text, txtCNIC.Text, txtPassword.Text);
-                {
+                
                     MessageBox.Show("u r registered");
                    
-                }
+                
             }
 
             else if (radioButtonDoctor.Checked == true)
             {
+                //MessageBox.Show("u r registered");
                 myserver.registerd(txtName.Text, txtCNIC.Text, txtPassword.Text, txtHospitalName.Text);
-                {
+                
                     MessageBox.Show("u r registered");
-                }
+                
             }
             else
             {

@@ -53,5 +53,12 @@ namespace Client
             this.Hide();
             registration.Show();
         }
+
+        private void linklblDoctorInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Doctor_Info DoctorInfo = new Doctor_Info();
+            this.Hide();
+            DoctorInfo.Show();
+        }
     }
 }

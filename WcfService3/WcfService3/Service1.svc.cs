@@ -184,6 +184,14 @@ namespace WcfService3
 
         }
 
+       public List<DoctorUser> search()
+       {
+           return DoctorData.datalist;
+       }
+       //public DoctorUser search(string CNIC)
+       //{
+       //    return DoctorData.datalist[CNIC];
+       //}
        
     }
 }
