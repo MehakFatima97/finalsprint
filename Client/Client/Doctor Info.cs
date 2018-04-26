@@ -34,7 +34,9 @@ namespace Client
 
         private void linklblLogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
+            Registration registration = new Registration();
+            this.Hide();
+            registration.Show();
         }
 
         private void cmdShow_Click(object sender, EventArgs e)
