@@ -111,6 +111,7 @@
             this.linklblDoctorinfo.TabIndex = 4;
             this.linklblDoctorinfo.TabStop = true;
             this.linklblDoctorinfo.Text = "Doctor info";
+            this.linklblDoctorinfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblDoctorinfo_LinkClicked);
             // 
             // Login
             // 

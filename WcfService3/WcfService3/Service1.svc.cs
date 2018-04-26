@@ -188,10 +188,25 @@ namespace WcfService3
        {
            return DoctorData.datalist;
        }
-       //public DoctorUser search(string CNIC)
-       //{
-       //    return DoctorData.datalist[CNIC];
-       //}
+       public DoctorUser search(string a)
+       {
+             List<DoctorData> pp = new List<DoctorData>();
+           foreach (DoctorUser ac in DoctorData.datalist)
+           {
+             if (ac.DoctorCNIC == CNIC)
+           {  pp.Add(ac);
+           }
+           //foreach (DoctorUser d in DoctorData.datalist)
+           
+           //    if (d.DoctorCNIC == a)
+               
+           //        return d;
+               
+          // return pp;
+           
+          // return DoctorData.datalist[a];
+           }
+
        
     }
 }

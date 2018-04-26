@@ -52,5 +52,12 @@ namespace Client
             this.Hide();
             resetpassword.Show();
         }
+
+        private void linklblDoctorinfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Doctor_Info DoctorInfo = new Doctor_Info();
+            this.Hide();
+            DoctorInfo.Show();
+        }
     }
 }
