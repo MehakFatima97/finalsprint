@@ -58,5 +58,12 @@ namespace Client
         {
            
         }
+
+        private void linklblPatientInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Patient patient = new Patient();
+            this.Hide();
+            patient.Show();
+        }
     }
 }

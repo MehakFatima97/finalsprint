@@ -64,6 +64,18 @@
     <Compile Include="LoginD.Designer.cs">
       <DependentUpon>LoginD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient.Designer.cs">
+      <DependentUpon>Patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientHistory.Designer.cs">
+      <DependentUpon>PatientHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +103,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginD.resx">
       <DependentUpon>LoginD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient.resx">
+      <DependentUpon>Patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientHistory.resx">
+      <DependentUpon>PatientHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

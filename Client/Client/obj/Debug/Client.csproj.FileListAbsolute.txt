@@ -25,3 +25,5 @@ C:\Users\mehak fatima\Desktop\New folder\finalsprint\Client\Client\obj\Debug\Cli
 C:\Users\mehak fatima\Desktop\New folder\finalsprint\Client\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
 C:\Users\mehak fatima\Desktop\New folder\finalsprint\Client\Client\obj\Debug\Client.Doctor_Info.resources
 C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.Doctor_Info.resources
+C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.Patient.resources
+C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.PatientHistory.resources

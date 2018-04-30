@@ -39,6 +39,7 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblHospitalName = new System.Windows.Forms.Label();
             this.linklblResetPassword = new System.Windows.Forms.LinkLabel();
+            this.linklblPatientInfo = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lblName
@@ -60,7 +61,7 @@
             // 
             // cmdLogin
             // 
-            this.cmdLogin.Location = new System.Drawing.Point(605, 251);
+            this.cmdLogin.Location = new System.Drawing.Point(622, 304);
             this.cmdLogin.Name = "cmdLogin";
             this.cmdLogin.Size = new System.Drawing.Size(75, 23);
             this.cmdLogin.TabIndex = 2;
@@ -71,7 +72,7 @@
             // linklblRegistration
             // 
             this.linklblRegistration.AutoSize = true;
-            this.linklblRegistration.Location = new System.Drawing.Point(35, 274);
+            this.linklblRegistration.Location = new System.Drawing.Point(35, 335);
             this.linklblRegistration.Name = "linklblRegistration";
             this.linklblRegistration.Size = new System.Drawing.Size(63, 13);
             this.linklblRegistration.TabIndex = 3;
@@ -133,7 +134,7 @@
             // linklblResetPassword
             // 
             this.linklblResetPassword.AutoSize = true;
-            this.linklblResetPassword.Location = new System.Drawing.Point(35, 233);
+            this.linklblResetPassword.Location = new System.Drawing.Point(35, 304);
             this.linklblResetPassword.Name = "linklblResetPassword";
             this.linklblResetPassword.Size = new System.Drawing.Size(84, 13);
             this.linklblResetPassword.TabIndex = 3;
@@ -141,11 +142,23 @@
             this.linklblResetPassword.Text = "Reset Password";
             this.linklblResetPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblResetPassword_LinkClicked);
             // 
+            // linklblPatientInfo
+            // 
+            this.linklblPatientInfo.AutoSize = true;
+            this.linklblPatientInfo.Location = new System.Drawing.Point(201, 304);
+            this.linklblPatientInfo.Name = "linklblPatientInfo";
+            this.linklblPatientInfo.Size = new System.Drawing.Size(61, 13);
+            this.linklblPatientInfo.TabIndex = 4;
+            this.linklblPatientInfo.TabStop = true;
+            this.linklblPatientInfo.Text = "Patient Info";
+            this.linklblPatientInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblPatientInfo_LinkClicked);
+            // 
             // LoginD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 307);
+            this.ClientSize = new System.Drawing.Size(778, 375);
+            this.Controls.Add(this.linklblPatientInfo);
             this.Controls.Add(this.linklblResetPassword);
             this.Controls.Add(this.linklblRegistration);
             this.Controls.Add(this.cmdLogin);
@@ -177,5 +190,6 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblHospitalName;
         private System.Windows.Forms.LinkLabel linklblResetPassword;
+        private System.Windows.Forms.LinkLabel linklblPatientInfo;
     }
 }
