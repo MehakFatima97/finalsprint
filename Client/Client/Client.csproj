@@ -52,6 +52,18 @@
     <Compile Include="Doctor Info.Designer.cs">
       <DependentUpon>Doctor Info.cs</DependentUpon>
     </Compile>
+    <Compile Include="Doctor Time Table.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor Time Table.Designer.cs">
+      <DependentUpon>Doctor Time Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +102,18 @@
     <Compile Include="ResetPassword.Designer.cs">
       <DependentUpon>ResetPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Time Table.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Time Table.Designer.cs">
+      <DependentUpon>Time Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timings.Designer.cs">
+      <DependentUpon>Timings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Web References\localhost\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -97,6 +121,12 @@
     </Compile>
     <EmbeddedResource Include="Doctor Info.resx">
       <DependentUpon>Doctor Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor Time Table.resx">
+      <DependentUpon>Doctor Time Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History.resx">
+      <DependentUpon>History.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -124,6 +154,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ResetPassword.resx">
       <DependentUpon>ResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Time Table.resx">
+      <DependentUpon>Time Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timings.resx">
+      <DependentUpon>Timings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

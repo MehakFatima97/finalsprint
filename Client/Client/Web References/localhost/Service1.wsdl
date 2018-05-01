@@ -79,6 +79,18 @@
   <wsdl:message name="IService1_search_OutputMessage">
     <wsdl:part name="parameters" element="tns:searchResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_timings_InputMessage">
+    <wsdl:part name="parameters" element="tns:timings" />
+  </wsdl:message>
+  <wsdl:message name="IService1_timings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:timingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_show_InputMessage">
+    <wsdl:part name="parameters" element="tns:show" />
+  </wsdl:message>
+  <wsdl:message name="IService1_show_OutputMessage">
+    <wsdl:part name="parameters" element="tns:showResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -127,6 +139,14 @@
     <wsdl:operation name="search">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/search" message="tns:IService1_search_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/searchResponse" message="tns:IService1_search_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="timings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/timings" message="tns:IService1_timings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/timingsResponse" message="tns:IService1_timings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="show">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/show" message="tns:IService1_show_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/showResponse" message="tns:IService1_show_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -232,6 +252,24 @@
     </wsdl:operation>
     <wsdl:operation name="search">
       <soap:operation soapAction="http://tempuri.org/IService1/search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="timings">
+      <soap:operation soapAction="http://tempuri.org/IService1/timings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="show">
+      <soap:operation soapAction="http://tempuri.org/IService1/show" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

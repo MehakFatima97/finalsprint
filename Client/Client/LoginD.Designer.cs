@@ -40,6 +40,7 @@
             this.lblHospitalName = new System.Windows.Forms.Label();
             this.linklblResetPassword = new System.Windows.Forms.LinkLabel();
             this.linklblPatientInfo = new System.Windows.Forms.LinkLabel();
+            this.linklblTimings = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lblName
@@ -153,11 +154,23 @@
             this.linklblPatientInfo.Text = "Patient Info";
             this.linklblPatientInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblPatientInfo_LinkClicked);
             // 
+            // linklblTimings
+            // 
+            this.linklblTimings.AutoSize = true;
+            this.linklblTimings.Location = new System.Drawing.Point(600, 44);
+            this.linklblTimings.Name = "linklblTimings";
+            this.linklblTimings.Size = new System.Drawing.Size(43, 13);
+            this.linklblTimings.TabIndex = 5;
+            this.linklblTimings.TabStop = true;
+            this.linklblTimings.Text = "Timings";
+            this.linklblTimings.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblTimings_LinkClicked);
+            // 
             // LoginD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 375);
+            this.Controls.Add(this.linklblTimings);
             this.Controls.Add(this.linklblPatientInfo);
             this.Controls.Add(this.linklblResetPassword);
             this.Controls.Add(this.linklblRegistration);
@@ -191,5 +204,6 @@
         private System.Windows.Forms.Label lblHospitalName;
         private System.Windows.Forms.LinkLabel linklblResetPassword;
         private System.Windows.Forms.LinkLabel linklblPatientInfo;
+        private System.Windows.Forms.LinkLabel linklblTimings;
     }
 }

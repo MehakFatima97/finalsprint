@@ -145,9 +145,9 @@ namespace WcfService3
         public bool logina(string adminCNIC, string adminpassword)
         {
             bool check = false;
-            foreach(AdminUser admin in AdminData.datalist)
+            foreach (AdminUser admin in AdminData.datalist)
             {
-                if(admin.AdminCNIC == adminCNIC && admin.Adminpassword == adminpassword)
+                if (admin.AdminCNIC == adminCNIC && admin.Adminpassword == adminpassword)
                 {
                     check = true;
                 }
@@ -158,56 +158,72 @@ namespace WcfService3
         public bool loginp(string patientCNIC, string patientpassword)
         {
             bool check = false;
-            foreach(PatientUser patient in PatientData.datalist)
+            foreach (PatientUser patient in PatientData.datalist)
             {
-                if(patient.PatientCNIC == patientCNIC && patient.Patientpassword == patientpassword )
+                if (patient.PatientCNIC == patientCNIC && patient.Patientpassword == patientpassword)
                 {
                     check = true;
                 }
             }
             return check;
-  
+
         }
 
-       public bool logind(string doctorname,string doctorCNIC, string doctorpassword, string hospitalname)
+        public bool logind(string doctorname, string doctorCNIC, string doctorpassword, string hospitalname)
         {
             bool check = false;
-           foreach(DoctorUser doctor in DoctorData.datalist)
-           {
-               if(doctor.Doctorname == doctorname && doctor.DoctorCNIC == doctorCNIC && doctor.Doctorpassword == doctorpassword && doctor.Hospitalname== hospitalname)
-               {
-                   check = true;
- 
-               }
-           }
-           return check;
+            foreach (DoctorUser doctor in DoctorData.datalist)
+            {
+                if (doctor.Doctorname == doctorname && doctor.DoctorCNIC == doctorCNIC && doctor.Doctorpassword == doctorpassword && doctor.Hospitalname == hospitalname)
+                {
+                    check = true;
+
+                }
+            }
+            return check;
 
         }
 
-       public List<DoctorUser> search()
-       {
-           return DoctorData.datalist;
-       }
-       //public DoctorUser search(string a)
-       //{
-       //    //List<DoctorData> pp = new List<DoctorData>();
-       //    foreach (DoctorUser ac in DoctorData.datalist)
-       //    {
-       //        if (ac.DoctorCNIC == a)
-       //        {
-       //            return ac;
-       //        }
-       //        //foreach (DoctorUser d in DoctorData.datalist)
+        public List<DoctorUser> search()
+        {
+            return DoctorData.datalist;
+        }
+        //public bool search(string doctorCNIC)
+        //{
+        //    bool check = false;
+        //   // List<DoctorData> pp = new List<DoctorData>();
+        //    foreach (DoctorUser ac in DoctorData.datalist)
+        //    {
+        //        if (ac.DoctorCNIC == doctorCNIC)
+        //        {
+        //            check = true;
+        //        }
 
-       //        //    if (d.DoctorCNIC == a)
+        //    }
+        //    return check;
 
-       //        //        return d;
+        //}
 
-       //        // return pp;
-
-       //        // return DoctorData.datalist[a];
-       //    }
-
-       //}
+        public void timings(string doctorname, string doctorCNIC, string hospitalname, string department, string day, string time, string date)
+        {
+            DoctorUser doctor = new DoctorUser();
+            doctor.Doctorname = doctorname;
+            doctor.DoctorCNIC = doctorCNIC;
+            doctor.Hospitalname = hospitalname;
+            doctor.Department1 = department;
+            doctor.Day1 = day;
+            doctor.Date1 = date;
+            doctor.Time1 = time;
+            DoctorData.arr.Add(doctor);
+        }
+        public List<DoctorUser> show()
+        {
+            return DoctorData.arr;
+        }
+        //public List<PatientUser> print()
+        //{
+        //    return PatientData.datalist;
+        //}
     }
+       
 }

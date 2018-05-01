@@ -182,4 +182,34 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="timings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="doctorname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="doctorCNIC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hospitalname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="department" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="day" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="time" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="date" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="timingsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="show">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="showResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService3" minOccurs="0" name="showResult" nillable="true" type="q4:ArrayOfDoctorUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

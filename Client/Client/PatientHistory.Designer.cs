@@ -30,8 +30,6 @@
         {
             this.lblName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.lblContact = new System.Windows.Forms.Label();
-            this.txtContact = new System.Windows.Forms.TextBox();
             this.lblCNIC = new System.Windows.Forms.Label();
             this.txtCNIC = new System.Windows.Forms.TextBox();
             this.cmdLogout = new System.Windows.Forms.Button();
@@ -68,22 +66,6 @@
             this.txtName.TabIndex = 1;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
-            // lblContact
-            // 
-            this.lblContact.AutoSize = true;
-            this.lblContact.Location = new System.Drawing.Point(169, 50);
-            this.lblContact.Name = "lblContact";
-            this.lblContact.Size = new System.Drawing.Size(44, 13);
-            this.lblContact.TabIndex = 0;
-            this.lblContact.Text = "Contact";
-            // 
-            // txtContact
-            // 
-            this.txtContact.Location = new System.Drawing.Point(289, 50);
-            this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(100, 20);
-            this.txtContact.TabIndex = 1;
-            // 
             // lblCNIC
             // 
             this.lblCNIC.AutoSize = true;
@@ -95,7 +77,7 @@
             // 
             // txtCNIC
             // 
-            this.txtCNIC.Location = new System.Drawing.Point(289, 87);
+            this.txtCNIC.Location = new System.Drawing.Point(289, 80);
             this.txtCNIC.Name = "txtCNIC";
             this.txtCNIC.Size = new System.Drawing.Size(100, 20);
             this.txtCNIC.TabIndex = 1;
@@ -118,6 +100,7 @@
             this.cmdSave.TabIndex = 2;
             this.cmdSave.Text = "Save";
             this.cmdSave.UseVisualStyleBackColor = true;
+            this.cmdSave.Click += new System.EventHandler(this.cmdSave_Click);
             // 
             // cmdNewPatient
             // 
@@ -164,6 +147,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(742, 257);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Age
             // 
@@ -203,7 +187,7 @@
             // linklblShowHistory
             // 
             this.linklblShowHistory.AutoSize = true;
-            this.linklblShowHistory.Location = new System.Drawing.Point(624, 35);
+            this.linklblShowHistory.Location = new System.Drawing.Point(560, 87);
             this.linklblShowHistory.Name = "linklblShowHistory";
             this.linklblShowHistory.Size = new System.Drawing.Size(69, 13);
             this.linklblShowHistory.TabIndex = 4;
@@ -224,10 +208,8 @@
             this.Controls.Add(this.cmdSave);
             this.Controls.Add(this.cmdLogout);
             this.Controls.Add(this.txtCNIC);
-            this.Controls.Add(this.txtContact);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblCNIC);
-            this.Controls.Add(this.lblContact);
             this.Controls.Add(this.lblName);
             this.Name = "PatientHistory";
             this.Text = "PatientHistory";
@@ -241,8 +223,6 @@
 
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label lblContact;
-        private System.Windows.Forms.TextBox txtContact;
         private System.Windows.Forms.Label lblCNIC;
         private System.Windows.Forms.TextBox txtCNIC;
         private System.Windows.Forms.Button cmdLogout;

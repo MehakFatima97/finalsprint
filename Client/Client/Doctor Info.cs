@@ -23,6 +23,9 @@ namespace Client
             BindingSource bs = new BindingSource();
             bs.DataSource = myserver.search();
             gv.DataSource = bs;
+            gv.Columns[0].Visible = false;
+            gv.Columns[1].Visible = false;
+            gv.Columns[6].Visible = false;
             
         }
 

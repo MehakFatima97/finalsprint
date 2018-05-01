@@ -45,5 +45,24 @@ namespace Client
         {
             
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void linklblTimeTable_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Doctor_Time_Table DoctorInfo = new Doctor_Time_Table();
+            this.Hide();
+            DoctorInfo.Show();
+        }
+
+        private void cmdSave_Click(object sender, EventArgs e)
+        {
+            //localhost.Service1 myserver = new localhost.Service1();
+            //myserver.timings(txtName.Text, txtCNIC.Text, txtHospitalName.Text, comboBoxDepartment.Text, comboBoxDay.Text, txtTime.Text, txtDate.Text);
+            //MessageBox.Show("saved");
+        }
     }
 }

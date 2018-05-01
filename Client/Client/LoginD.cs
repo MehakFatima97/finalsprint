@@ -65,5 +65,12 @@ namespace Client
             this.Hide();
             patient.Show();
         }
+
+        private void linklblTimings_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Timings time = new Timings();
+            this.Hide();
+            time.Show();
+        }
     }
 }

@@ -12,6 +12,9 @@ namespace Client
 {
     public partial class Registration : Form
     {
+        public static string SetValueForText1 = "";
+        public static string SetValueForText2 = "";  
+
         public Registration()
         {
             InitializeComponent();
@@ -19,6 +22,7 @@ namespace Client
 
         private void cmdRegister_Click(object sender, EventArgs e)
         {
+            
             localhost.Service1 myserver = new localhost.Service1();
             //bool register;
             //bool registerpassed;
@@ -35,6 +39,8 @@ namespace Client
             {
                // MessageBox.Show("u r registered");
                 myserver.registerp(txtName.Text, txtCNIC.Text, txtPassword.Text);
+                SetValueForText1 = txtName.Text;
+                SetValueForText2 = txtCNIC.Text;
                 
                     MessageBox.Show("u r registered");
                    

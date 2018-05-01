@@ -36,6 +36,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.linklblRegistration = new System.Windows.Forms.LinkLabel();
             this.linklblDoctorinfo = new System.Windows.Forms.LinkLabel();
+            this.linklblHistory = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // txtCNIC
@@ -113,11 +114,23 @@
             this.linklblDoctorinfo.Text = "Doctor info";
             this.linklblDoctorinfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblDoctorinfo_LinkClicked);
             // 
+            // linklblHistory
+            // 
+            this.linklblHistory.AutoSize = true;
+            this.linklblHistory.Location = new System.Drawing.Point(526, 69);
+            this.linklblHistory.Name = "linklblHistory";
+            this.linklblHistory.Size = new System.Drawing.Size(39, 13);
+            this.linklblHistory.TabIndex = 5;
+            this.linklblHistory.TabStop = true;
+            this.linklblHistory.Text = "History";
+            this.linklblHistory.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblHistory_LinkClicked);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(657, 310);
+            this.Controls.Add(this.linklblHistory);
             this.Controls.Add(this.linklblDoctorinfo);
             this.Controls.Add(this.cmdLogin);
             this.Controls.Add(this.linklblRegistration);
@@ -143,5 +156,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.LinkLabel linklblRegistration;
         private System.Windows.Forms.LinkLabel linklblDoctorinfo;
+        private System.Windows.Forms.LinkLabel linklblHistory;
     }
 }

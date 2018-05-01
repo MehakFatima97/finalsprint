@@ -39,7 +39,11 @@ namespace WcfService3
         [OperationContract]
         List<DoctorUser> search();
         //[OperationContract]
-        //DoctorUser search(string a);
+        //bool search(string doctorCNIC);
+        [OperationContract]
+        void timings(string doctorname, string doctorCNIC, string hospitalname,string department, string day, string time,string date);
+        [OperationContract]
+        List<DoctorUser> show();
         
         // TODO: Add your service operations here
     }

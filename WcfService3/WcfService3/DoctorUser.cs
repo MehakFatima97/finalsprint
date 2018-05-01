@@ -14,6 +14,36 @@ namespace WcfService3
         private string doctorname;
         private string doctorpassword;
         private string confirmpassword;
+        private string Department;
+        
+        [DataMember]
+        public string Department1
+        {
+            get { return Department; }
+            set { Department = value; }
+        }
+        private string Day;
+        [DataMember]
+        public string Day1
+        {
+            get { return Day; }
+            set { Day = value; }
+        }
+        private string Date;
+        [DataMember]
+        public string Date1
+        {
+            get { return Date; }
+            set { Date = value; }
+        }
+        private string Time;
+        [DataMember]
+        public string Time1
+        {
+            get { return Time; }
+            set { Time = value; }
+        }
+
         
         public string Confirmpassword
         {

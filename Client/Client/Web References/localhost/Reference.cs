@@ -53,6 +53,10 @@ namespace Client.localhost {
         
         private System.Threading.SendOrPostCallback searchOperationCompleted;
         
+        private System.Threading.SendOrPostCallback timingsOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback showOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -126,6 +130,12 @@ namespace Client.localhost {
         
         /// <remarks/>
         public event searchCompletedEventHandler searchCompleted;
+        
+        /// <remarks/>
+        public event timingsCompletedEventHandler timingsCompleted;
+        
+        /// <remarks/>
+        public event showCompletedEventHandler showCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -525,6 +535,75 @@ namespace Client.localhost {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/timings", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void timings([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string doctorname, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string doctorCNIC, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string hospitalname, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string department, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string day, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string time, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string date) {
+            this.Invoke("timings", new object[] {
+                        doctorname,
+                        doctorCNIC,
+                        hospitalname,
+                        department,
+                        day,
+                        time,
+                        date});
+        }
+        
+        /// <remarks/>
+        public void timingsAsync(string doctorname, string doctorCNIC, string hospitalname, string department, string day, string time, string date) {
+            this.timingsAsync(doctorname, doctorCNIC, hospitalname, department, day, time, date, null);
+        }
+        
+        /// <remarks/>
+        public void timingsAsync(string doctorname, string doctorCNIC, string hospitalname, string department, string day, string time, string date, object userState) {
+            if ((this.timingsOperationCompleted == null)) {
+                this.timingsOperationCompleted = new System.Threading.SendOrPostCallback(this.OntimingsOperationCompleted);
+            }
+            this.InvokeAsync("timings", new object[] {
+                        doctorname,
+                        doctorCNIC,
+                        hospitalname,
+                        department,
+                        day,
+                        time,
+                        date}, this.timingsOperationCompleted, userState);
+        }
+        
+        private void OntimingsOperationCompleted(object arg) {
+            if ((this.timingsCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.timingsCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/show", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService3")]
+        public DoctorUser[] show() {
+            object[] results = this.Invoke("show", new object[0]);
+            return ((DoctorUser[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void showAsync() {
+            this.showAsync(null);
+        }
+        
+        /// <remarks/>
+        public void showAsync(object userState) {
+            if ((this.showOperationCompleted == null)) {
+                this.showOperationCompleted = new System.Threading.SendOrPostCallback(this.OnshowOperationCompleted);
+            }
+            this.InvokeAsync("show", new object[0], this.showOperationCompleted, userState);
+        }
+        
+        private void OnshowOperationCompleted(object arg) {
+            if ((this.showCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.showCompleted(this, new showCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
@@ -598,11 +677,52 @@ namespace Client.localhost {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService3")]
     public partial class DoctorUser {
         
+        private string date1Field;
+        
+        private string day1Field;
+        
+        private string department1Field;
+        
         private string doctorCNICField;
         
         private string doctornameField;
         
         private string hospitalnameField;
+        
+        private string time1Field;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Date1 {
+            get {
+                return this.date1Field;
+            }
+            set {
+                this.date1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Day1 {
+            get {
+                return this.day1Field;
+            }
+            set {
+                this.day1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Department1 {
+            get {
+                return this.department1Field;
+            }
+            set {
+                this.department1Field = value;
+            }
+        }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
@@ -634,6 +754,17 @@ namespace Client.localhost {
             }
             set {
                 this.hospitalnameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Time1 {
+            get {
+                return this.time1Field;
+            }
+            set {
+                this.time1Field = value;
             }
         }
     }
@@ -919,6 +1050,36 @@ namespace Client.localhost {
         private object[] results;
         
         internal searchCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public DoctorUser[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((DoctorUser[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void timingsCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void showCompletedEventHandler(object sender, showCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class showCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal showCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

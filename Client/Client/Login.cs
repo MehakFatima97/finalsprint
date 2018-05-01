@@ -25,17 +25,25 @@ namespace Client
             //bool loginp;
             //bool loginppassed;
             myserver.logina(txtCNIC.Text, txtPassword.Text, out login, out loginpassed);
-            myserver.loginp(txtCNIC.Text, txtPassword.Text, out login, out loginpassed);
             if (login)
             {
-                MessageBox.Show("valid user");
+                {
+                    MessageBox.Show("valid user");
+                }
             }
             else
             {
-                MessageBox.Show("invalid user");
+                myserver.loginp(txtCNIC.Text, txtPassword.Text, out login, out loginpassed);
+                if (login)
+                {
+                    MessageBox.Show("valid user");
+                }
+                else
+                {
+                    MessageBox.Show("invalid user");
+                }
+
             }
-
-
             
         }
 
@@ -55,9 +63,45 @@ namespace Client
 
         private void linklblDoctorinfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Doctor_Info DoctorInfo = new Doctor_Info();
+            localhost.Service1 myserver = new localhost.Service1();
+            bool login;
+            bool loginpassed;
+            
+            myserver.logina(txtCNIC.Text, txtPassword.Text, out login, out loginpassed);
+            if (login)
+            {
+                Doctor_Info DoctorInfo = new Doctor_Info();
+                this.Hide();
+                DoctorInfo.Show();
+            }
+            
+        }
+
+        private void linklblTimeTable_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+             Doctor_Time_Table DoctorInfo = new Doctor_Time_Table();
             this.Hide();
             DoctorInfo.Show();
+        }
+
+        private void linklblHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            localhost.Service1 myserver = new localhost.Service1();
+            bool login;
+            bool loginpassed;
+            myserver.loginp(txtCNIC.Text, txtPassword.Text, out login, out loginpassed);
+            if (login)
+            {
+                History DoctorInfo = new History();
+                this.Hide();
+                DoctorInfo.Show();
+
+                
+                //gv.Columns[0].Visible = false;
+               // gv.Columns[1].Visible = false;
+               // gv.Columns[6].Visible = false;
+
+            }
         }
     }
 }
