@@ -45,6 +45,7 @@
             this.txtCNIC.Name = "txtCNIC";
             this.txtCNIC.Size = new System.Drawing.Size(100, 20);
             this.txtCNIC.TabIndex = 0;
+            this.txtCNIC.TextChanged += new System.EventHandler(this.txtCNIC_TextChanged);
             // 
             // lblCNIC
             // 

@@ -220,6 +220,23 @@ namespace WcfService3
             return null;
 
         }
+        public DoctorUser show6(string doctorname, string department)
+        {
+            //    bool check = false;
+            //   // List<DoctorData> pp = new List<DoctorData>();
+            foreach (DoctorUser ac in DoctorData.arr)
+            {
+                if (ac.Doctorname == doctorname || ac.Department1 == department)
+                {
+                    return ac;
+                }
+                
+            }
+            //    return check;
+            return null;
+
+        }
+        
 
         public void timings(string doctorname, string doctorCNIC, string hospitalname, string department, string day, string time, string date)
         {

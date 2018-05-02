@@ -12,6 +12,7 @@ namespace Client
 {
     public partial class Login : Form
     {
+        public static string SetValueForText11 = ""; 
         public Login()
         {
             InitializeComponent();
@@ -102,6 +103,11 @@ namespace Client
                // gv.Columns[6].Visible = false;
 
             }
+        }
+
+        private void txtCNIC_TextChanged(object sender, EventArgs e)
+        {
+            SetValueForText11 = txtCNIC.Text;
         }
     }
 }

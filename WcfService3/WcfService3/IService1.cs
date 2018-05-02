@@ -48,6 +48,8 @@ namespace WcfService3
         PatientUser searchhistory(string patientCNIC);
         [OperationContract]
         void save(string CNIC, string medicines, string age, string disease);
+        [OperationContract]
+        DoctorUser show6(string doctorname, string department);
         
         // TODO: Add your service operations here
     }

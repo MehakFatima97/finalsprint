@@ -28,59 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblName = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
             this.lblCNIC = new System.Windows.Forms.Label();
-            this.txtCNIC = new System.Windows.Forms.TextBox();
             this.cmdLogout = new System.Windows.Forms.Button();
             this.cmdSave = new System.Windows.Forms.Button();
             this.cmdNewPatient = new System.Windows.Forms.Button();
             this.cmdEdit = new System.Windows.Forms.Button();
             this.cmdPrint = new System.Windows.Forms.Button();
-            this.gv6 = new System.Windows.Forms.DataGridView();
-            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CNIC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Disease = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hospital = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Medicines = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linklblShowHistory = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.gv6 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.gv6)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(169, 9);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(35, 13);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Name";
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(289, 9);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 20);
-            this.txtName.TabIndex = 1;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // lblCNIC
             // 
             this.lblCNIC.AutoSize = true;
-            this.lblCNIC.Location = new System.Drawing.Point(169, 87);
+            this.lblCNIC.Location = new System.Drawing.Point(337, 42);
             this.lblCNIC.Name = "lblCNIC";
-            this.lblCNIC.Size = new System.Drawing.Size(32, 13);
+            this.lblCNIC.Size = new System.Drawing.Size(0, 13);
             this.lblCNIC.TabIndex = 0;
-            this.lblCNIC.Text = "CNIC";
-            // 
-            // txtCNIC
-            // 
-            this.txtCNIC.Location = new System.Drawing.Point(289, 80);
-            this.txtCNIC.Name = "txtCNIC";
-            this.txtCNIC.Size = new System.Drawing.Size(100, 20);
-            this.txtCNIC.TabIndex = 1;
+            this.lblCNIC.Click += new System.EventHandler(this.lblCNIC_Click);
             // 
             // cmdLogout
             // 
@@ -131,58 +99,6 @@
             this.cmdPrint.Text = "Print";
             this.cmdPrint.UseVisualStyleBackColor = true;
             // 
-            // gv6
-            // 
-            this.gv6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gv6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Age,
-            this.CNIC,
-            this.Date,
-            this.Disease,
-            this.Doctor,
-            this.Hospital,
-            this.Medicines});
-            this.gv6.Location = new System.Drawing.Point(12, 125);
-            this.gv6.Name = "gv6";
-            this.gv6.Size = new System.Drawing.Size(742, 257);
-            this.gv6.TabIndex = 3;
-            this.gv6.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Age
-            // 
-            this.Age.HeaderText = "Age";
-            this.Age.Name = "Age";
-            // 
-            // CNIC
-            // 
-            this.CNIC.HeaderText = "CNIC";
-            this.CNIC.Name = "CNIC";
-            // 
-            // Date
-            // 
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            // 
-            // Disease
-            // 
-            this.Disease.HeaderText = "Disease";
-            this.Disease.Name = "Disease";
-            // 
-            // Doctor
-            // 
-            this.Doctor.HeaderText = "Doctor";
-            this.Doctor.Name = "Doctor";
-            // 
-            // Hospital
-            // 
-            this.Hospital.HeaderText = "Hospital";
-            this.Hospital.Name = "Hospital";
-            // 
-            // Medicines
-            // 
-            this.Medicines.HeaderText = "Medicines";
-            this.Medicines.Name = "Medicines";
-            // 
             // linklblShowHistory
             // 
             this.linklblShowHistory.AutoSize = true;
@@ -194,24 +110,51 @@
             this.linklblShowHistory.Text = "Show History";
             this.linklblShowHistory.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblShowHistory_LinkClicked);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(169, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "CNIC";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(297, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 6;
+            // 
+            // gv6
+            // 
+            this.gv6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gv6.Location = new System.Drawing.Point(69, 134);
+            this.gv6.Name = "gv6";
+            this.gv6.Size = new System.Drawing.Size(614, 234);
+            this.gv6.TabIndex = 7;
+            this.gv6.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv6_CellContentClick);
+            // 
             // PatientHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 434);
-            this.Controls.Add(this.linklblShowHistory);
             this.Controls.Add(this.gv6);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.linklblShowHistory);
             this.Controls.Add(this.cmdPrint);
             this.Controls.Add(this.cmdEdit);
             this.Controls.Add(this.cmdNewPatient);
             this.Controls.Add(this.cmdSave);
             this.Controls.Add(this.cmdLogout);
-            this.Controls.Add(this.txtCNIC);
-            this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblCNIC);
-            this.Controls.Add(this.lblName);
             this.Name = "PatientHistory";
             this.Text = "PatientHistory";
+            this.Load += new System.EventHandler(this.PatientHistory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gv6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -220,23 +163,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblCNIC;
-        private System.Windows.Forms.TextBox txtCNIC;
         private System.Windows.Forms.Button cmdLogout;
         private System.Windows.Forms.Button cmdSave;
         private System.Windows.Forms.Button cmdNewPatient;
         private System.Windows.Forms.Button cmdEdit;
         private System.Windows.Forms.Button cmdPrint;
-        private System.Windows.Forms.DataGridView gv6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Age;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CNIC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Disease;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Doctor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Hospital;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Medicines;
         private System.Windows.Forms.LinkLabel linklblShowHistory;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView gv6;
     }
 }

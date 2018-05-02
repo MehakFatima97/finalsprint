@@ -33,7 +33,10 @@ namespace Client
 
         private void cmdShow_Click(object sender, EventArgs e)
         {
-
+            localhost.Service1 myserver = new localhost.Service1();
+            BindingSource bs = new BindingSource();
+            bs.DataSource = myserver.show6(txtName.Text,comboBoxDepartment.Text);
+            gv3.DataSource = bs;
         }
 
         private void gv3_CellContentClick(object sender, DataGridViewCellEventArgs e)

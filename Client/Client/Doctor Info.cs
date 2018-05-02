@@ -48,10 +48,6 @@ namespace Client
             BindingSource bs = new BindingSource();
             bs.DataSource = myserver.searchA(txtCNIC.Text);
             gv.DataSource = bs;
-            gv.Columns[0].Visible = false;
-            gv.Columns[1].Visible = false;
-            gv.Columns[6].Visible = false;
-            gv.Columns[2].Visible = false;
         }
     }
 }

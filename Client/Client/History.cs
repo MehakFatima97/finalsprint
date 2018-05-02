@@ -19,9 +19,9 @@ namespace Client
 
         private void linklblDoctorTimeTable_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Doctor_Time_Table logind = new Doctor_Time_Table();
+            Doctor_Time_Table p = new Doctor_Time_Table();
             this.Hide();
-            logind.Show();
+            p.Show();
             
         }
 
@@ -70,8 +70,16 @@ namespace Client
 
         private void History_Load(object sender, EventArgs e)
         {
-            lblName.Text = Registration.SetValueForText1;
-            lblCNIC.Text = Registration.SetValueForText2;
+            //lblName.Text = Registration.SetValueForText1;
+            lblCNIC.Text = Login.SetValueForText11;
+        }
+
+        private void cmdshow_Click(object sender, EventArgs e)
+        {
+            localhost.Service1 myserver = new localhost.Service1();
+            BindingSource bs = new BindingSource();
+            bs.DataSource = myserver.searchhistory(lblCNIC.Text);
+            gv5.DataSource = bs;
         }
     }
 }

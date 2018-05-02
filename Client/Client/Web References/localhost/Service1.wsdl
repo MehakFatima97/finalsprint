@@ -103,6 +103,18 @@
   <wsdl:message name="IService1_searchhistory_OutputMessage">
     <wsdl:part name="parameters" element="tns:searchhistoryResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_save_InputMessage">
+    <wsdl:part name="parameters" element="tns:save" />
+  </wsdl:message>
+  <wsdl:message name="IService1_save_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_show6_InputMessage">
+    <wsdl:part name="parameters" element="tns:show6" />
+  </wsdl:message>
+  <wsdl:message name="IService1_show6_OutputMessage">
+    <wsdl:part name="parameters" element="tns:show6Response" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -167,6 +179,14 @@
     <wsdl:operation name="searchhistory">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/searchhistory" message="tns:IService1_searchhistory_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/searchhistoryResponse" message="tns:IService1_searchhistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="save">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/save" message="tns:IService1_save_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/saveResponse" message="tns:IService1_save_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="show6">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/show6" message="tns:IService1_show6_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/show6Response" message="tns:IService1_show6_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -308,6 +328,24 @@
     </wsdl:operation>
     <wsdl:operation name="searchhistory">
       <soap:operation soapAction="http://tempuri.org/IService1/searchhistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="save">
+      <soap:operation soapAction="http://tempuri.org/IService1/save" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="show6">
+      <soap:operation soapAction="http://tempuri.org/IService1/show6" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

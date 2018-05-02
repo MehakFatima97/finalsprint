@@ -48,6 +48,7 @@
             this.txtPatientCNIC.Name = "txtPatientCNIC";
             this.txtPatientCNIC.Size = new System.Drawing.Size(242, 20);
             this.txtPatientCNIC.TabIndex = 1;
+            this.txtPatientCNIC.TextChanged += new System.EventHandler(this.txtPatientCNIC_TextChanged);
             // 
             // cmdNext
             // 

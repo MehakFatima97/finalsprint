@@ -86,6 +86,10 @@
             // comboBoxDepartment
             // 
             this.comboBoxDepartment.FormattingEnabled = true;
+            this.comboBoxDepartment.Items.AddRange(new object[] {
+            "cardiology",
+            "dentist",
+            "pyscology"});
             this.comboBoxDepartment.Location = new System.Drawing.Point(159, 65);
             this.comboBoxDepartment.Name = "comboBoxDepartment";
             this.comboBoxDepartment.Size = new System.Drawing.Size(230, 21);

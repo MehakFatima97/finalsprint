@@ -12,6 +12,7 @@ namespace Client
 {
     public partial class PatientHistory : Form
     {
+        public static string SetValueForText1 = "";
         public PatientHistory()
         {
             InitializeComponent();
@@ -43,18 +44,23 @@ namespace Client
 
         private void linklblShowHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+
             localhost.Service1 myserver = new localhost.Service1();
             BindingSource bs = new BindingSource();
-            bs.DataSource = myserver.searchhistory(txtCNIC.Text);
+            bs.DataSource = myserver.searchhistory(label2.Text);
             gv6.DataSource = bs;
-            //gv.Columns[0].Visible = false;
-            //gv.Columns[1].Visible = false;
-            //gv.Columns[6].Visible = false;
-            //gv.Columns[2].Visible = false;
+            //gv6.Columns[0].Visible = false;
+            //gv6.Columns[1].Visible = false;
+            //gv6.Columns[4].Visible = false;
+            //gv6.Columns[2].Visible = false;
+            //gv6.Columns[3].Visible = false;
+           // gv6.Columns[].Visible = false;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            gv6.Rows.Add( LoginD.SetValueForText7);
+
 
         }
 
@@ -68,9 +74,35 @@ namespace Client
         private void cmdSave_Click(object sender, EventArgs e)
         {
             localhost.Service1 myserver = new localhost.Service1();
-            //myserver.save( txtage.T);
-            //MessageBox.Show("saved");
+            //gv6.Rows.Add();
+            MessageBox.Show("saved");
 
+        }
+
+        private void txtCNIC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCNIC_Click(object sender, EventArgs e)
+        {
+            label2.Text = Patient.SetValueForText1;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PatientHistory_Load(object sender, EventArgs e)
+        {
+            label2.Text = Patient.SetValueForText1;
+        }
+
+        private void gv6_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+          
         }
     }
 }

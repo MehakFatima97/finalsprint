@@ -12,6 +12,8 @@ namespace Client
 {
     public partial class Patient : Form
     {
+        public static string SetValueForText1 = "";
+
         public Patient()
         {
             InitializeComponent();
@@ -22,6 +24,11 @@ namespace Client
             PatientHistory patienthistory = new PatientHistory();
             this.Hide();
             patienthistory.Show();
+        }
+
+        private void txtPatientCNIC_TextChanged(object sender, EventArgs e)
+        {
+            SetValueForText1 = txtPatientCNIC.Text;
         }
     }
 }

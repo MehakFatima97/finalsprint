@@ -12,6 +12,9 @@ namespace Client
 {
     public partial class LoginD : Form
     {
+        
+        public static string SetValueForText7 = "";
+        public static string SetValueForText10 = "";
         public LoginD()
         {
             InitializeComponent();
@@ -19,6 +22,7 @@ namespace Client
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            SetValueForText7 = txtName.Text;
 
         }
 
@@ -38,6 +42,13 @@ namespace Client
             
             if (login)
             {
+
+
+                
+               
+                
+                
+                
                 MessageBox.Show("valid user");
             }
             else
@@ -61,6 +72,7 @@ namespace Client
 
         private void linklblPatientInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+
             Patient patient = new Patient();
             this.Hide();
             patient.Show();
