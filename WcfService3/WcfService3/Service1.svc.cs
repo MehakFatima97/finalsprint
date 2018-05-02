@@ -188,21 +188,38 @@ namespace WcfService3
         {
             return DoctorData.datalist;
         }
-        //public bool search(string doctorCNIC)
-        //{
+        public DoctorUser searchA(string doctorCNIC)
+        {
         //    bool check = false;
         //   // List<DoctorData> pp = new List<DoctorData>();
-        //    foreach (DoctorUser ac in DoctorData.datalist)
-        //    {
-        //        if (ac.DoctorCNIC == doctorCNIC)
-        //        {
-        //            check = true;
-        //        }
+            foreach (DoctorUser ac in DoctorData.datalist)
+            {
+                if (ac.DoctorCNIC == doctorCNIC)
+                {
+                   return ac;
+                }
 
-        //    }
+            }
         //    return check;
+               return null;
 
-        //}
+        }
+        public PatientUser searchhistory(string patientCNIC)
+        {
+            //    bool check = false;
+            //   // List<DoctorData> pp = new List<DoctorData>();
+            foreach (PatientUser ac in PatientData.datalist)
+            {
+                if (ac.PatientCNIC == patientCNIC)
+                {
+                    return ac;
+                }
+
+            }
+            //    return check;
+            return null;
+
+        }
 
         public void timings(string doctorname, string doctorCNIC, string hospitalname, string department, string day, string time, string date)
         {
@@ -219,6 +236,14 @@ namespace WcfService3
         public List<DoctorUser> show()
         {
             return DoctorData.arr;
+        }
+        public void save(string CNIC, string medicines, string age, string disease)
+        {
+            PatientUser p = new PatientUser();
+            p.Age = age;
+            p.Medicines1 = medicines;
+            p.Disease1 = disease;
+            PatientData.datalist.Add(p);
         }
         //public List<PatientUser> print()
         //{

@@ -46,3 +46,7 @@ C:\Users\mehak fatima\Desktop\finalsprint\Client\Client\obj\Debug\Client.Timings
 C:\Users\mehak fatima\Desktop\finalsprint\Client\Client\obj\Debug\Client.csproj.GenerateResource.Cache
 C:\Users\mehak fatima\Desktop\finalsprint\Client\Client\obj\Debug\Client.Doctor_Time_Table.resources
 C:\Users\mehak fatima\Desktop\finalsprint\Client\Client\obj\Debug\Client.History.resources
+C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.Doctor_Time_Table.resources
+C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.History.resources
+C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.Time_Table.resources
+C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.Timings.resources

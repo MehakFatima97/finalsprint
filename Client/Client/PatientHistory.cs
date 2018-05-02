@@ -43,7 +43,14 @@ namespace Client
 
         private void linklblShowHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
+            localhost.Service1 myserver = new localhost.Service1();
+            BindingSource bs = new BindingSource();
+            bs.DataSource = myserver.searchhistory(txtCNIC.Text);
+            gv6.DataSource = bs;
+            //gv.Columns[0].Visible = false;
+            //gv.Columns[1].Visible = false;
+            //gv.Columns[6].Visible = false;
+            //gv.Columns[2].Visible = false;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -60,9 +67,10 @@ namespace Client
 
         private void cmdSave_Click(object sender, EventArgs e)
         {
-            //localhost.Service1 myserver = new localhost.Service1();
-            //myserver.timings(txtName.Text, txtCNIC.Text, txtHospitalName.Text, comboBoxDepartment.Text, comboBoxDay.Text, txtTime.Text, txtDate.Text);
+            localhost.Service1 myserver = new localhost.Service1();
+            //myserver.save( txtage.T);
             //MessageBox.Show("saved");
+
         }
     }
 }

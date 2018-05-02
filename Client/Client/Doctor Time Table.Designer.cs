@@ -52,6 +52,7 @@
             this.gv3.Name = "gv3";
             this.gv3.Size = new System.Drawing.Size(366, 190);
             this.gv3.TabIndex = 1;
+            this.gv3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv3_CellContentClick);
             // 
             // linklblBack
             // 
@@ -98,6 +99,7 @@
             this.cmdShow.TabIndex = 6;
             this.cmdShow.Text = "Show";
             this.cmdShow.UseVisualStyleBackColor = true;
+            this.cmdShow.Click += new System.EventHandler(this.cmdShow_Click);
             // 
             // Doctor_Time_Table
             // 

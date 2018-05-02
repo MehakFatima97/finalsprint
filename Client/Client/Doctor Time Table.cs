@@ -30,5 +30,15 @@ namespace Client
             this.Hide();
             DoctorInfo.Show();
         }
+
+        private void cmdShow_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gv3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

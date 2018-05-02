@@ -38,12 +38,16 @@ namespace WcfService3
         bool logind(string doctorname,string doctorCNIC, string doctorpassword, string hospitalname);
         [OperationContract]
         List<DoctorUser> search();
-        //[OperationContract]
-        //bool search(string doctorCNIC);
+        [OperationContract]
+        DoctorUser searchA(string doctorCNIC);
         [OperationContract]
         void timings(string doctorname, string doctorCNIC, string hospitalname,string department, string day, string time,string date);
         [OperationContract]
         List<DoctorUser> show();
+        [OperationContract]
+        PatientUser searchhistory(string patientCNIC);
+        [OperationContract]
+        void save(string CNIC, string medicines, string age, string disease);
         
         // TODO: Add your service operations here
     }

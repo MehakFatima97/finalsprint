@@ -37,7 +37,7 @@
             this.cmdNewPatient = new System.Windows.Forms.Button();
             this.cmdEdit = new System.Windows.Forms.Button();
             this.cmdPrint = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gv6 = new System.Windows.Forms.DataGridView();
             this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CNIC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +46,7 @@
             this.Hospital = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Medicines = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linklblShowHistory = new System.Windows.Forms.LinkLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv6)).BeginInit();
             this.SuspendLayout();
             // 
             // lblName
@@ -131,10 +131,10 @@
             this.cmdPrint.Text = "Print";
             this.cmdPrint.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // gv6
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gv6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gv6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Age,
             this.CNIC,
             this.Date,
@@ -142,12 +142,11 @@
             this.Doctor,
             this.Hospital,
             this.Medicines});
-            this.dataGridView1.Enabled = false;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 125);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(742, 257);
-            this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.gv6.Location = new System.Drawing.Point(12, 125);
+            this.gv6.Name = "gv6";
+            this.gv6.Size = new System.Drawing.Size(742, 257);
+            this.gv6.TabIndex = 3;
+            this.gv6.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Age
             // 
@@ -201,7 +200,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 434);
             this.Controls.Add(this.linklblShowHistory);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gv6);
             this.Controls.Add(this.cmdPrint);
             this.Controls.Add(this.cmdEdit);
             this.Controls.Add(this.cmdNewPatient);
@@ -213,7 +212,7 @@
             this.Controls.Add(this.lblName);
             this.Name = "PatientHistory";
             this.Text = "PatientHistory";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,7 +229,7 @@
         private System.Windows.Forms.Button cmdNewPatient;
         private System.Windows.Forms.Button cmdEdit;
         private System.Windows.Forms.Button cmdPrint;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gv6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Age;
         private System.Windows.Forms.DataGridViewTextBoxColumn CNIC;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;

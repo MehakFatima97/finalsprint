@@ -44,10 +44,14 @@ namespace Client
 
         private void cmdShow_Click(object sender, EventArgs e)
         {
-            //localhost.Service1 myserver = new localhost.Service1();
-            //BindingSource bs = new BindingSource();
-            //bs.DataSource = myserver.search(txtCNIC.Text);
-            //gv.DataSource = bs;
+            localhost.Service1 myserver = new localhost.Service1();
+            BindingSource bs = new BindingSource();
+            bs.DataSource = myserver.searchA(txtCNIC.Text);
+            gv.DataSource = bs;
+            gv.Columns[0].Visible = false;
+            gv.Columns[1].Visible = false;
+            gv.Columns[6].Visible = false;
+            gv.Columns[2].Visible = false;
         }
     }
 }
