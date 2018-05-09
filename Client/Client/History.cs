@@ -78,7 +78,7 @@ namespace Client
         {
             localhost.Service1 myserver = new localhost.Service1();
             BindingSource bs = new BindingSource();
-            bs.DataSource = myserver.searchhistory(lblCNIC.Text);
+            bs.DataSource = myserver.getp(lblCNIC.Text);
             gv5.DataSource = bs;
         }
     }

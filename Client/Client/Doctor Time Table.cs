@@ -41,7 +41,7 @@ namespace Client
 
         private void gv3_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+           
         }
     }
 }

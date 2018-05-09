@@ -196,6 +196,7 @@ namespace WcfService3
             {
                 if (ac.DoctorCNIC == doctorCNIC)
                 {
+
                    return ac;
                 }
 
@@ -204,13 +205,34 @@ namespace WcfService3
                return null;
 
         }
-        public PatientUser searchhistory(string patientCNIC)
+        public PatientUser addmed(string CNIC, string medicines, string age, string disease)
+        {
+            foreach (PatientUser p in PatientData.datalist)
+            {
+                if (p.PatientCNIC == CNIC)
+                {
+                    p.Medicines1 = medicines;
+                    p.Disease1 = disease;
+                    p.Age = age;
+                    PatientData.datalist.Add(p);
+                    return p;
+                }
+            }
+            return null;
+        }
+
+        public List<PatientUser> showp()
+        {
+            return PatientData.datalist;
+        }
+
+        public DoctorUser searchab(string doctorName)
         {
             //    bool check = false;
             //   // List<DoctorData> pp = new List<DoctorData>();
-            foreach (PatientUser ac in PatientData.datalist)
+            foreach (DoctorUser ac in DoctorData.datalist)
             {
-                if (ac.PatientCNIC == patientCNIC)
+                if (ac.Doctorname == doctorName)
                 {
                     return ac;
                 }
@@ -218,6 +240,12 @@ namespace WcfService3
             }
             //    return check;
             return null;
+
+        }
+
+        public List<PatientUser> searchhistory()
+        {
+            return PatientData.datalist;
 
         }
         public DoctorUser show6(string doctorname, string department)
@@ -250,6 +278,37 @@ namespace WcfService3
             doctor.Time1 = time;
             DoctorData.arr.Add(doctor);
         }
+
+        public void addinto( string age,string medicines,string disease,string CNIC)
+        {
+            PatientUser p = new PatientUser();
+            p.Age = age;
+            p.Disease1 = disease;
+            p.Medicines1 = medicines;
+            p.PatientCNIC = CNIC;
+            PatientData.datalist.Add(p);
+           
+            
+            
+        }
+        public PatientUser atlastshow(PatientUser p)
+        {
+            return p;
+        }
+
+        public PatientUser getp(string CNIC)
+        {
+            foreach (PatientUser p in PatientData.datalist)
+            {
+                if (p.PatientCNIC == CNIC)
+                {
+                    return p;
+                }
+            }
+            return null;
+        }
+
+
         public List<DoctorUser> show()
         {
             return DoctorData.arr;

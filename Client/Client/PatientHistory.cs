@@ -40,6 +40,7 @@ namespace Client
         private void cmdEdit_Click(object sender, EventArgs e)
         {
             
+            
         }
 
         private void linklblShowHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -47,8 +48,13 @@ namespace Client
 
             localhost.Service1 myserver = new localhost.Service1();
             BindingSource bs = new BindingSource();
-            bs.DataSource = myserver.searchhistory(label2.Text);
+            //BindingSource b = new BindingSource();
+            bs.DataSource = myserver.searchhistory();
+            
             gv6.DataSource = bs;
+
+          
+            
             //gv6.Columns[0].Visible = false;
             //gv6.Columns[1].Visible = false;
             //gv6.Columns[4].Visible = false;
@@ -74,8 +80,11 @@ namespace Client
         private void cmdSave_Click(object sender, EventArgs e)
         {
             localhost.Service1 myserver = new localhost.Service1();
-            //gv6.Rows.Add();
-            MessageBox.Show("saved");
+            BindingSource bs = new BindingSource();
+            //BindingSource b = new BindingSource();
+            bs.DataSource = myserver.addmed(label2.Text, txtmedicines.Text, txtage.Text, txtdisease.Text);
+
+            gv6.DataSource = bs;
 
         }
 
@@ -97,12 +106,58 @@ namespace Client
         private void PatientHistory_Load(object sender, EventArgs e)
         {
             label2.Text = Patient.SetValueForText1;
+            lblName.Text = LoginD.SetValueForText7;
+            lblHospital.Text = LoginD.SetValueForText12;
+            showPosts();
         }
 
         private void gv6_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
           
+        }
+
+        private void cmdAdd_Click(object sender, EventArgs e)
+        {
+
+            localhost.Service1 myserver = new localhost.Service1();
+
+            //localhost.PatientUser p = new localhost.PatientUser();
+            //p.Age = txtage.Text;
+            //p.Medicines1 = txtmedicines.Text;
+            //p.Disease1 = txtdisease.Text;
+            //p.PatientCNIC = Patient.SetValueForText1;
+           // myserver.addinto(p,label2.Text);
+            //BindingSource bs = new BindingSource();
+            //BindingSource b = new BindingSource();
+             myserver.addinto(txtage.Text,txtmedicines.Text,txtdisease.Text,label2.Text);
+             MessageBox.Show("saved");
+
+            //gv6.DataSource = bs;
+
+
+            //showPosts();
+            
+            
+
+
+        }
+
+        public void showPosts()
+        {
+
+            //  gvPosts.AutoGenerateColumns = false;
+
+            localhost.Service1 myserver = new localhost.Service1();
+            BindingSource bs = new BindingSource();
+            bs.DataSource = myserver.getp(label2.Text);
+            gv6.DataSource = bs;
+
+            //gv6.Columns[2].Visible = false;
+
+
+
+
         }
     }
 }

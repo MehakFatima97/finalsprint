@@ -65,6 +65,16 @@ namespace Client.localhost {
         
         private System.Threading.SendOrPostCallback show6OperationCompleted;
         
+        private System.Threading.SendOrPostCallback showpOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback addmedOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback addintoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback atlastshowOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback getpOperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -156,6 +166,21 @@ namespace Client.localhost {
         
         /// <remarks/>
         public event show6CompletedEventHandler show6Completed;
+        
+        /// <remarks/>
+        public event showpCompletedEventHandler showpCompleted;
+        
+        /// <remarks/>
+        public event addmedCompletedEventHandler addmedCompleted;
+        
+        /// <remarks/>
+        public event addintoCompletedEventHandler addintoCompleted;
+        
+        /// <remarks/>
+        public event atlastshowCompletedEventHandler atlastshowCompleted;
+        
+        /// <remarks/>
+        public event getpCompletedEventHandler getpCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetData", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -655,25 +680,24 @@ namespace Client.localhost {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/searchhistory", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
-        public PatientUser searchhistory([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string patientCNIC) {
-            object[] results = this.Invoke("searchhistory", new object[] {
-                        patientCNIC});
-            return ((PatientUser)(results[0]));
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService3")]
+        public PatientUser[] searchhistory() {
+            object[] results = this.Invoke("searchhistory", new object[0]);
+            return ((PatientUser[])(results[0]));
         }
         
         /// <remarks/>
-        public void searchhistoryAsync(string patientCNIC) {
-            this.searchhistoryAsync(patientCNIC, null);
+        public void searchhistoryAsync() {
+            this.searchhistoryAsync(null);
         }
         
         /// <remarks/>
-        public void searchhistoryAsync(string patientCNIC, object userState) {
+        public void searchhistoryAsync(object userState) {
             if ((this.searchhistoryOperationCompleted == null)) {
                 this.searchhistoryOperationCompleted = new System.Threading.SendOrPostCallback(this.OnsearchhistoryOperationCompleted);
             }
-            this.InvokeAsync("searchhistory", new object[] {
-                        patientCNIC}, this.searchhistoryOperationCompleted, userState);
+            this.InvokeAsync("searchhistory", new object[0], this.searchhistoryOperationCompleted, userState);
         }
         
         private void OnsearchhistoryOperationCompleted(object arg) {
@@ -746,6 +770,165 @@ namespace Client.localhost {
             if ((this.show6Completed != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.show6Completed(this, new show6CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/showp", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService3")]
+        public PatientUser[] showp() {
+            object[] results = this.Invoke("showp", new object[0]);
+            return ((PatientUser[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void showpAsync() {
+            this.showpAsync(null);
+        }
+        
+        /// <remarks/>
+        public void showpAsync(object userState) {
+            if ((this.showpOperationCompleted == null)) {
+                this.showpOperationCompleted = new System.Threading.SendOrPostCallback(this.OnshowpOperationCompleted);
+            }
+            this.InvokeAsync("showp", new object[0], this.showpOperationCompleted, userState);
+        }
+        
+        private void OnshowpOperationCompleted(object arg) {
+            if ((this.showpCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.showpCompleted(this, new showpCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/addmed", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public PatientUser addmed([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string CNIC, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string medicines, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string age, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string disease) {
+            object[] results = this.Invoke("addmed", new object[] {
+                        CNIC,
+                        medicines,
+                        age,
+                        disease});
+            return ((PatientUser)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void addmedAsync(string CNIC, string medicines, string age, string disease) {
+            this.addmedAsync(CNIC, medicines, age, disease, null);
+        }
+        
+        /// <remarks/>
+        public void addmedAsync(string CNIC, string medicines, string age, string disease, object userState) {
+            if ((this.addmedOperationCompleted == null)) {
+                this.addmedOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaddmedOperationCompleted);
+            }
+            this.InvokeAsync("addmed", new object[] {
+                        CNIC,
+                        medicines,
+                        age,
+                        disease}, this.addmedOperationCompleted, userState);
+        }
+        
+        private void OnaddmedOperationCompleted(object arg) {
+            if ((this.addmedCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.addmedCompleted(this, new addmedCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/addinto", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void addinto([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string age, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string medicines, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string disease, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string CNIC) {
+            this.Invoke("addinto", new object[] {
+                        age,
+                        medicines,
+                        disease,
+                        CNIC});
+        }
+        
+        /// <remarks/>
+        public void addintoAsync(string age, string medicines, string disease, string CNIC) {
+            this.addintoAsync(age, medicines, disease, CNIC, null);
+        }
+        
+        /// <remarks/>
+        public void addintoAsync(string age, string medicines, string disease, string CNIC, object userState) {
+            if ((this.addintoOperationCompleted == null)) {
+                this.addintoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnaddintoOperationCompleted);
+            }
+            this.InvokeAsync("addinto", new object[] {
+                        age,
+                        medicines,
+                        disease,
+                        CNIC}, this.addintoOperationCompleted, userState);
+        }
+        
+        private void OnaddintoOperationCompleted(object arg) {
+            if ((this.addintoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.addintoCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/atlastshow", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public PatientUser atlastshow([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] PatientUser p) {
+            object[] results = this.Invoke("atlastshow", new object[] {
+                        p});
+            return ((PatientUser)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void atlastshowAsync(PatientUser p) {
+            this.atlastshowAsync(p, null);
+        }
+        
+        /// <remarks/>
+        public void atlastshowAsync(PatientUser p, object userState) {
+            if ((this.atlastshowOperationCompleted == null)) {
+                this.atlastshowOperationCompleted = new System.Threading.SendOrPostCallback(this.OnatlastshowOperationCompleted);
+            }
+            this.InvokeAsync("atlastshow", new object[] {
+                        p}, this.atlastshowOperationCompleted, userState);
+        }
+        
+        private void OnatlastshowOperationCompleted(object arg) {
+            if ((this.atlastshowCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.atlastshowCompleted(this, new atlastshowCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/getp", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public PatientUser getp([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string CNIC) {
+            object[] results = this.Invoke("getp", new object[] {
+                        CNIC});
+            return ((PatientUser)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getpAsync(string CNIC) {
+            this.getpAsync(CNIC, null);
+        }
+        
+        /// <remarks/>
+        public void getpAsync(string CNIC, object userState) {
+            if ((this.getpOperationCompleted == null)) {
+                this.getpOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetpOperationCompleted);
+            }
+            this.InvokeAsync("getp", new object[] {
+                        CNIC}, this.getpOperationCompleted, userState);
+        }
+        
+        private void OngetpOperationCompleted(object arg) {
+            if ((this.getpCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getpCompleted(this, new getpCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1357,10 +1540,10 @@ namespace Client.localhost {
         }
         
         /// <remarks/>
-        public PatientUser Result {
+        public PatientUser[] Result {
             get {
                 this.RaiseExceptionIfNecessary();
-                return ((PatientUser)(this.results[0]));
+                return ((PatientUser[])(this.results[0]));
             }
         }
     }
@@ -1391,6 +1574,114 @@ namespace Client.localhost {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((DoctorUser)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void showpCompletedEventHandler(object sender, showpCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class showpCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal showpCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public PatientUser[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((PatientUser[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void addmedCompletedEventHandler(object sender, addmedCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class addmedCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal addmedCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public PatientUser Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((PatientUser)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void addintoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void atlastshowCompletedEventHandler(object sender, atlastshowCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class atlastshowCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal atlastshowCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public PatientUser Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((PatientUser)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void getpCompletedEventHandler(object sender, getpCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getpCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getpCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public PatientUser Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((PatientUser)(this.results[0]));
             }
         }
     }

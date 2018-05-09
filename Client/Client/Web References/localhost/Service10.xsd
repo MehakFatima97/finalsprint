@@ -25,6 +25,12 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="DoctorUser" nillable="true" type="tns:DoctorUser" />
+  <xs:complexType name="ArrayOfPatientUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PatientUser" nillable="true" type="tns:PatientUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPatientUser" nillable="true" type="tns:ArrayOfPatientUser" />
   <xs:complexType name="PatientUser">
     <xs:sequence>
       <xs:element minOccurs="0" name="Age" nillable="true" type="xs:string" />

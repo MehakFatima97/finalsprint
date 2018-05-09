@@ -12,6 +12,7 @@ namespace Client
 {
     public partial class Time_Table : Form
     {
+        
         public Time_Table()
         {
             InitializeComponent();
@@ -37,7 +38,7 @@ namespace Client
 
         private void gv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+             
         }
     }
 }

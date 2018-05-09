@@ -115,6 +115,36 @@
   <wsdl:message name="IService1_show6_OutputMessage">
     <wsdl:part name="parameters" element="tns:show6Response" />
   </wsdl:message>
+  <wsdl:message name="IService1_showp_InputMessage">
+    <wsdl:part name="parameters" element="tns:showp" />
+  </wsdl:message>
+  <wsdl:message name="IService1_showp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:showpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addmed_InputMessage">
+    <wsdl:part name="parameters" element="tns:addmed" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addmed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addmedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addinto_InputMessage">
+    <wsdl:part name="parameters" element="tns:addinto" />
+  </wsdl:message>
+  <wsdl:message name="IService1_addinto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addintoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_atlastshow_InputMessage">
+    <wsdl:part name="parameters" element="tns:atlastshow" />
+  </wsdl:message>
+  <wsdl:message name="IService1_atlastshow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:atlastshowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getp_InputMessage">
+    <wsdl:part name="parameters" element="tns:getp" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getpResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -187,6 +217,26 @@
     <wsdl:operation name="show6">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/show6" message="tns:IService1_show6_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/show6Response" message="tns:IService1_show6_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="showp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/showp" message="tns:IService1_showp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/showpResponse" message="tns:IService1_showp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addmed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addmed" message="tns:IService1_addmed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addmedResponse" message="tns:IService1_addmed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addinto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/addinto" message="tns:IService1_addinto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/addintoResponse" message="tns:IService1_addinto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="atlastshow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/atlastshow" message="tns:IService1_atlastshow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/atlastshowResponse" message="tns:IService1_atlastshow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getp" message="tns:IService1_getp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getpResponse" message="tns:IService1_getp_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -346,6 +396,51 @@
     </wsdl:operation>
     <wsdl:operation name="show6">
       <soap:operation soapAction="http://tempuri.org/IService1/show6" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showp">
+      <soap:operation soapAction="http://tempuri.org/IService1/showp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addmed">
+      <soap:operation soapAction="http://tempuri.org/IService1/addmed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addinto">
+      <soap:operation soapAction="http://tempuri.org/IService1/addinto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="atlastshow">
+      <soap:operation soapAction="http://tempuri.org/IService1/atlastshow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getp">
+      <soap:operation soapAction="http://tempuri.org/IService1/getp" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

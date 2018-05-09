@@ -14,7 +14,7 @@ namespace WcfService3
         private string patientpassword;
         private string confirmpassword;
         private string age;
-        private string disease;
+        
 
 
 

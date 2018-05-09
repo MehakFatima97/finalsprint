@@ -45,11 +45,28 @@ namespace WcfService3
         [OperationContract]
         List<DoctorUser> show();
         [OperationContract]
-        PatientUser searchhistory(string patientCNIC);
+        List<PatientUser> searchhistory();
         [OperationContract]
         void save(string CNIC, string medicines, string age, string disease);
         [OperationContract]
         DoctorUser show6(string doctorname, string department);
+    
+        [OperationContract]
+        List<PatientUser> showp();
+        [OperationContract]
+        PatientUser addmed(string CNIC, string medicines, string age, string disease);
+        [OperationContract]
+        void addinto(string age, string medicines, string disease, string CNIC);
+        [OperationContract]
+        PatientUser atlastshow(PatientUser p);
+        [OperationContract]
+        PatientUser getp(string CNIC);
+        
+        
+        
+
+
+        
         
         // TODO: Add your service operations here
     }

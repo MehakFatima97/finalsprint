@@ -12,7 +12,8 @@ namespace Client
 {
     public partial class LoginD : Form
     {
-        
+        public static string SetValueForText11 = "";
+        public static string SetValueForText12 = "";
         public static string SetValueForText7 = "";
         public static string SetValueForText10 = "";
         public LoginD()
@@ -22,7 +23,8 @@ namespace Client
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            SetValueForText7 = txtName.Text;
+           SetValueForText7 = txtName.Text;
+            SetValueForText12 = txtHospitalName.Text; 
 
         }
 
@@ -44,8 +46,7 @@ namespace Client
             {
 
 
-                
-               
+                 
                 
                 
                 
