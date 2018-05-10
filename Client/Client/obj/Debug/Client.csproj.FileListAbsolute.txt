@@ -50,3 +50,4 @@ C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.Doctor_Time_Tab
 C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.History.resources
 C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.Time_Table.resources
 C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.Timings.resources
+C:\Users\Anum\Desktop\finalsprint\Client\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache

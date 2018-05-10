@@ -20,3 +20,4 @@ C:\Users\mehak fatima\Desktop\finalsprint\WcfService3\WcfService3\bin\WcfService
 C:\Users\mehak fatima\Desktop\finalsprint\WcfService3\WcfService3\obj\Debug\WcfService3.csprojResolveAssemblyReference.cache
 C:\Users\mehak fatima\Desktop\finalsprint\WcfService3\WcfService3\obj\Debug\WcfService3.dll
 C:\Users\mehak fatima\Desktop\finalsprint\WcfService3\WcfService3\obj\Debug\WcfService3.pdb
+C:\Users\Anum\Desktop\finalsprint\WcfService3\WcfService3\obj\Debug\WcfService3.csproj.CoreCompileInputs.cache
